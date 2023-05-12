@@ -184,7 +184,8 @@ VALUES
 		('In Progress', 'Cash', '2023-05-04'),
 		('Delivered', 'Credit', '2023-05-03'),
 		('Completed', 'Cash', '2023-05-02'),
-		('In Progress', 'Credit', '2023-05-01');
+		('In Progress', 'Credit', '2023-05-01')
+ON DUPLICATE KEY UPDATE `Status` = VALUES(`Status`);			
 
 INSERT INTO `Repair_Order`(`Order_ID`, `C_SSN`, `City`, `Street_NO`, `Building_NO`, `District`)
 VALUES

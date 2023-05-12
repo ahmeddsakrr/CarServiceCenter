@@ -196,4 +196,5 @@ CREATE TABLE `Consist_OF`(
     FOREIGN KEY (`Order_ID`) REFERENCES `Order`(`Order_ID`) ON DELETE CASCADE ON UPDATE CASCADE ,
     FOREIGN KEY(`Component_Model`) REFERENCES `Component`(`Model`) ON DELETE CASCADE ON UPDATE CASCADE 
 );
+-- --------------------------------------------------------------------
 
