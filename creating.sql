@@ -50,7 +50,7 @@ CREATE TABLE `Employee` (
 	`E_SSN`CHAR(14),
     `Salary` FLOAT UNSIGNED NOT NULL CHECK(`Salary` != 0) ,
     `Center_ID`INT UNSIGNED NOT NULL,
-    `Role` ENUM('Engineer', 'Sales Man') NOT NULL,
+    `Role` ENUM('Engineer', 'Sales Man', 'Janitor','Cashier') NOT NULL,
     PRIMARY KEY (`E_SSN`),
     FOREIGN KEY (`Center_ID`) REFERENCES `Service_Center`(`Center_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY(`E_SSN`) REFERENCES `Person`(`SSN`) ON DELETE CASCADE ON UPDATE CASCADE
