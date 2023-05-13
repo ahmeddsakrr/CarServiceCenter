@@ -1,3 +1,5 @@
+-- language: sql
+
 CREATE TABLE `Person` (
 	`SSN` CHAR(14) CHECK (`SSN` REGEXP '^[0-9]{14}$'),
     `Birthdate` DATE,
